@@ -2,6 +2,7 @@
 
 ## it is...
 - 下拉刷新, 上拉加载的vue插件
+- 那个vue-scroller感觉好像不适合我的项目...好吧其实就是不会用
 
 ## Build Setup
 
