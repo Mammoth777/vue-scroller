@@ -1,6 +1,5 @@
 <template>
   <div class="con">
-    <!-- <h1>title here</h1> -->
     <scroller
       :on-infinite="infinite"
       :on-refresh="refresh"
@@ -15,7 +14,7 @@
 </template>
 
 <script>
-import scroller from '../components/scroller'
+import scroller from '../components/scroller/scroller'
 export default {
   name: "demo",
   components: {
