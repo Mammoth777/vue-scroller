@@ -32,8 +32,8 @@ export default {
     return {
       topPercent: 0, // 页面卷动比例
       startPos: 0, // 触摸开始位置
-      limitPulldown: 50, // 下拉阈值
-      limitPullup: 50, // 上拉阈值
+      limitPulldown: 50, // 下拉阈值 (这两个有空可以放在props里)
+      limitPullup: 50, // 上拉阈值 (这两个有空可以放在props里)
       pulldownlen: 0, // 下拉距离
       pulluplen: 0, // 上拉距离
       pullState: 0 // 拉动状态, 0: 无 , 1:下拉, 2:上拉
