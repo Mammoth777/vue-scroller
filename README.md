@@ -28,3 +28,8 @@ onInfinite| Function | 上拉callback | 延迟.5s
 onRefresh | Function | 下拉callback | 引用上拉callback
 isFirstLoad| Boolean | 第一次进入是否加载 | false
 bottomPosition | Number | 上拉加载动画与底部的距离 | 0
+
+Slot | Description
+:-: | :-:
+top | 顶部动画
+bottom | 底部动画
