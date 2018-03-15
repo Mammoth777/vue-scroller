@@ -13,7 +13,7 @@
       </slot>
     </div>
     <div class="content"
-      :style="{transform: `translateY(${pulldownlen || pulluplen}px)`}"
+      :style="{transform: `translateY(${pulldownlen || pulluplen}px)`, 'background-color': contentBackgroundColor}"
     >
       <slot class="inner"></slot>
     </div>
@@ -32,11 +32,12 @@ export default {
     return {
       topPercent: 0, // 页面卷动比例
       startPos: 0, // 触摸开始位置
-      limitPulldown: 50, // 下拉阈值 (这两个有空可以放在props里)
-      limitPullup: 50, // 上拉阈值 (这两个有空可以放在props里)
+      limitPulldown: 50, // 下拉阈值
+      limitPullup: 50, // 上拉阈值
       pulldownlen: 0, // 下拉距离
       pulluplen: 0, // 上拉距离
-      pullState: 0 // 拉动状态, 0: 无 , 1:下拉, 2:上拉
+      pullState: 0, // 拉动状态, 0: 无 , 1:下拉, 2:上拉
+      hasMore: true, // 默认有更多
     };
   },
   props: {
@@ -66,6 +67,11 @@ export default {
       type: Number,
       default: 0,
     },
+    contentBackgroundColor: {
+      // 主体背景色
+      type: String,
+      default: '', // 默认是空, 但是css设置的透明色
+    }
   },
   computed: {
     reachBottom() {
@@ -184,6 +190,7 @@ export default {
   .content {
     transition: all 0.2s ease-out;
     background-color: transparent;
+    //padding-bottom: 60px; /* 减掉浏览器地址栏高度, 不得已而设置, 后续看看怎么隐藏浏览器地址栏 */
   }
   .top {
     position: absolute;

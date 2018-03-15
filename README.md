@@ -7,17 +7,8 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
-
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
 ## options
@@ -33,3 +24,17 @@ Slot | Description
 :-: | :-:
 top | 顶部动画
 bottom | 底部动画
+
+### 手动触发infinite
+- `triggerInfinite()`
+
+### done
+```javascript
+infinite(done) {
+  if(hasMore){
+    done();
+  }else{
+    done(false);
+  }
+}
+```
